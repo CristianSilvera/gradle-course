@@ -1,3 +1,11 @@
 task compilar <<{
     println 'Estoy compilando ... Hello world!'
 }
+
+task pruebasUnitarias <<{
+    println 'Estoy lanzando pruebas unitarias'
+}
+
+task empaquetar <<{
+    println"Estoy creando un ZIP"
+}
