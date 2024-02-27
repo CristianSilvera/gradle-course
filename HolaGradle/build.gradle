@@ -1,11 +1,12 @@
-task compilar <<{
-    println 'Estoy compilando ... Hello world!'
-}
+apply plugin: "java"
 
-task pruebasUnitarias <<{
-    println 'Estoy lanzando pruebas unitarias'
-}
+apply plugin: "application"
 
-task empaquetar <<{
-    println"Estoy creando un ZIP"
+version = '1.0'
+mainClassName = 'HolaMundo'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'HolaMundo'
+    }
 }
